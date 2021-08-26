@@ -19,28 +19,28 @@ myqr 网址
 ```  
 例如：  
 ```Bash
-myqr weilai0415.github.io
+myqr https://github.com/WeiLai0415
 ```
 就可以生成一个简单的二维码了，如图。
 ### 改变二维码边长
 可以给`myqr`传递一个参数`-v`，范围是1～40。
 例如：  
 ```Bash
-myqr weilai0415.github.io -v 10
+myqr https://github.com/WeiLai0415 -v 10
 ```
 ### 命名二维码图片并保存至指定位置
 传递参数`-n`命名，参数`-d`指定保存位置。
 例如：  
 ```Bash
-myqr weilai0415.github.io -n blog.jpg -d e:\document
+myqr https://github.com/WeiLai0415 -n QRcode.jpg -d e:\document
 ```
-将图片保存至`e:\document\blog.jpg`
+将图片保存至`e:\document\QRcode.jpg`
 
 ### 为二维码添加图片背景
 传递参数`-p`添加图片背景为指定图片，注意*myqr*生成的二维码默认是黑白的，因此若想生成彩色二维码，还需传递一个参数`-c`。
 例如：  
 ```Bash
-myqr weilai0415.github.io -p e:\document\iamge.jpg -c
+myqr https://github.com/WeiLai0415 -p e:\document\iamge.jpg -c
 ```
 图片格式可以是`.gif`，因此可以制作动态二维码。
 
@@ -54,7 +54,7 @@ myqr weilai0415.github.io -p e:\document\iamge.jpg -c
 例如：
 ```Python
 from MyQR import myqr
-myqr.run(words='https://weilai0415.github.io')
+myqr.run(words='https://github.com/WeiLai0415')
 ```
 ### 为二维码添加图片背景
 传递`picture`参数  
@@ -63,7 +63,7 @@ myqr.run(words='https://weilai0415.github.io')
 ```Python
 from MyQR import myqr
 myqr.run(
-    words='https://weilai0415.github.io',
+    words='https://github.com/WeiLai0415',
     picture='img.jpg',
     colorized=True
 )
